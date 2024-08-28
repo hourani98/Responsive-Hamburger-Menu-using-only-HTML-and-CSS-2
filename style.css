@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(christopher-gower-m_HRfLhgABo-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+nav{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+nav h2{
+    font-size: 40px;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+}
+ li {
+    margin: 0 10px;
+}
+ li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+a:hover{
+    color: gray;
+    text-decoration: underline;
+
+}
+.open-menu {
+    font-size: 18px;
+    cursor: pointer;
+   display: none;
+    
+}
+
+
+
+#check{
+    display: none;
+}
+@media (max-width:700px) {
+    
+    ul{
+        background: #fff;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        transition: all 0.2 ease-in-out;
+
+    }
+    li{
+        margin-top: 40px;
+    }
+    .open-menu{
+        display: block;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
